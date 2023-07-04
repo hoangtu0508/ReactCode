@@ -1,0 +1,13 @@
+.contain {
+    text-align: center;
+}
+
+.item-right {
+    float: right;
+    margin-right: 20%;
+}
+
+.item-left {
+    float: left;
+    margin-left: 20%;
+}

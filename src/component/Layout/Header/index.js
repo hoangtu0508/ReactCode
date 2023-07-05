@@ -1,10 +1,9 @@
-import React from 'react'
-import './Nav.css';
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import React from 'react';
+import './Header.css';
 
-const Nav = () => {
+const Header = () => {
   return (
-    <div className={"body"}>
+    <div className={"nav"}>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/news">News</a></li>
@@ -14,4 +13,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Header

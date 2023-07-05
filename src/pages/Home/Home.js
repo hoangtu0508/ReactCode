@@ -1,5 +1,5 @@
 import React from 'react'
-import List from '../component/List'
+import List from '../../component/List'
 
 const Home = () => {
   return (

@@ -1,19 +1,22 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import News from "./pages/News";
-import Contact from "./pages/Contact";
-import Nav from "./component/Nav";
+import {publicRoutes} from '../src/routes/index';
+import DefaultLayout from "./component/Layout/DefaultLayout";
+
 function App() {
  
   return (
     <div>
-    <Nav />
-
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/news" element={<News />}/>
-      <Route path="/contact" element={<Contact />}/>
-    </Routes>
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            const Layout = route.layout || DefaultLayout;
+            const Page = route.component;
+            return <Route key={index} path={route.path} 
+            element={
+              <Layout>
+                <Page />
+              </Layout>}/>
+          })}
+        </Routes>
     </div>
   );
 }

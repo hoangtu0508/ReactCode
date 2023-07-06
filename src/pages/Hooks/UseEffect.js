@@ -13,6 +13,8 @@ const UseEffect = () => {
     const [countdown, setCountdown] = useState(0)
     const [inputCount, setInputCount] = useState(0)
     const [showtime, setShowtime] = useState(false)
+
+    const [avatar, setAvatar] = useState()
 //------call Api
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${type}`)
@@ -62,9 +64,28 @@ const UseEffect = () => {
         // return () => clearInterval(interval);
     },[showtime,countdown])
 
+    //--------preview avatar-----------
+    useEffect(() => {
+        return () => {
+            avatar && URL.revokeObjectURL(avatar.preview)
+        }
+    }, [avatar])
+
+    const handleAvatar = (e) => {
+        const file = e.target.files[0]
+
+        file.preview = URL.createObjectURL(file)
+        setAvatar(file)
+    }
     return (
         <div>
             <h3>UseEffect</h3>
+            <div>
+                <h4>Preview Avatar</h4>
+                <input type='file' onChange={(e) => handleAvatar(e)}></input>
+                {avatar && (<img src={avatar.preview} width="80%"></img>)}
+            </div>
+
             <div>
                 <h4>Đồng hồ điếm ngược</h4>
                 <input type='number' value={inputCount} onChange={(e) => setInputCount(e.target.value)}></input>

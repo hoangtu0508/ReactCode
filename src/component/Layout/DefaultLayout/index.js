@@ -2,16 +2,20 @@ import React from 'react'
 import Header from '../Header'
 import Silebar from '../Sidebar'
 import './DefaultLayout.css'
+import GlobalState from '../../../pages/Hooks/GlobalState/index'
 
-const DefaultLayout = ({children}) => {
+const DefaultLayout = ({ children }) => {
   return (
-    <div className='main'>
+    <GlobalState>
+      <div className='main'>
         <Header />
         <div className='container'>
-            <Silebar />
-            <div className='content'>{children}</div>
+          <Silebar />
+          <div className='content'>{children}</div>
         </div>
-    </div>
+      </div>
+    </GlobalState>
+
   )
 }
 

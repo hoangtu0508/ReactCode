@@ -7,6 +7,8 @@ import UseRef from "../pages/Hooks/UseRef";
 import UseCallback from "../pages/Hooks/UseCallback";
 import UseMemo from "../pages/Hooks/UseMemo";
 import UseReducer from "../pages/Hooks/UseReducer";
+import UseContext from "../pages/Hooks/UseContext";
+import GlobalState from "../pages/Hooks/GlobalState";
 const publicRoutes = [
     {path: '/', component: Home},
     {path: '/news', component: News},
@@ -17,6 +19,8 @@ const publicRoutes = [
     {path: '/usecallback', component: UseCallback},
     {path: '/usememo', component: UseMemo},
     {path: '/usereducer', component: UseReducer},
+    {path: '/usecontext', component: UseContext},
+    {path: '/useglobalstate', component: GlobalState},
 
 ]
 

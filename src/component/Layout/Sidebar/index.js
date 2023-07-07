@@ -14,6 +14,8 @@ const SideBar = () => {
             <li><Link to="/usecallback">useCallback</Link></li>
             <li><Link to="/usememo">useMemo</Link></li>
             <li><Link to="/usereducer">UseReducer</Link></li>
+            <li><Link to="/usecontext">UseContext</Link></li>
+            <li><Link to="/useglobalstate">Global State with Context + useReducer </Link></li>
           </ul>
       </div>
       <div className='redux'>

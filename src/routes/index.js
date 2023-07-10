@@ -1,6 +1,6 @@
 import Home from "../pages/Home/Home";
-import News from "../pages/News/News";
-import Contact from "../pages/Contact/Contact";
+import Hooks from "../pages/News/News";
+import Redux from "../pages/redux/index";
 import UseState from "../pages/Hooks/UseState";
 import UseEffect from "../pages/Hooks/UseEffect";
 import UseRef from "../pages/Hooks/UseRef";
@@ -10,9 +10,9 @@ import UseReducer from "../pages/Hooks/UseReducer";
 import UseContext from "../pages/Hooks/UseContext";
 import GlobalState from "../pages/Hooks/GlobalState";
 const publicRoutes = [
-    {path: '/', component: Home},
-    {path: '/news', component: News},
-    {path: '/contact', component: Contact},
+    {path: '/', component: Home, layout : null},
+    {path: '/hooks', component: Hooks},
+    {path: '/redux', component: Redux, layout : null},
     {path: '/usestate', component: UseState},
     {path: '/useeffect', component: UseEffect},
     {path: '/useref', component: UseRef},

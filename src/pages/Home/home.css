@@ -1,0 +1,29 @@
+.home {
+    margin-top: 200px;
+    text-align: center;
+}
+.home a {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border: 2px solid green;
+}
+.home a:link {
+    color: red;
+}
+
+/* visited link */
+.home a:visited {
+    color: green;
+}
+
+/* mouse over link */
+.home a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+.home a:active {
+    color: blue;
+}

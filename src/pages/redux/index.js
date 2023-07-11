@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
-import Header from '../../component/Layout/Header'
-import HeaderInfo from './HeaderInfo'
-import EditPage from './EditPage'
-
-const Redux = () => {
-    const [isEdit, setIsEdit] = useState(false)
-    return (
-        <div>
-            <Header />
-            {isEdit ? (<EditPage />) : (<HeaderInfo setIsEdit={setIsEdit}/>)}
-        </div>
-    )
+import React from 'react'
+import PostsList from './features/post/PostsList'
+import AddPostForm from './features/post/AddPostForm'
+const index = () => {
+  return (
+    <div>
+      <div><AddPostForm/></div>
+      <div><PostsList/></div>
+    </div>
+  )
 }
 
-export default Redux
+export default index

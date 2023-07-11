@@ -1,0 +1,11 @@
+.redux-container {
+    text-align: center;
+    display: flex;
+}
+.redux-container-slidebar {
+    width: 30%;
+}
+
+.redux-container-content {
+    width: 70%;
+}

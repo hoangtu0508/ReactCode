@@ -9,10 +9,13 @@ import UseMemo from "../pages/Hooks/UseMemo";
 import UseReducer from "../pages/Hooks/UseReducer";
 import UseContext from "../pages/Hooks/UseContext";
 import GlobalState from "../pages/Hooks/GlobalState";
+
+import Counter from "../pages/redux/features/couter/Counter"
+import Posts from "../pages/redux/index"
 const publicRoutes = [
     {path: '/', component: Home, layout : null},
     {path: '/hooks', component: Hooks},
-    {path: '/redux', component: Redux, layout : null},
+    {path: '/redux', component: Redux},
     {path: '/usestate', component: UseState},
     {path: '/useeffect', component: UseEffect},
     {path: '/useref', component: UseRef},
@@ -21,6 +24,9 @@ const publicRoutes = [
     {path: '/usereducer', component: UseReducer},
     {path: '/usecontext', component: UseContext},
     {path: '/useglobalstate', component: GlobalState},
+
+    {path: '/counter', component: Counter},
+    {path: '/posts', component: Posts},
 
 ]
 

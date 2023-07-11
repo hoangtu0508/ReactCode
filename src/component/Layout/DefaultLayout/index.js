@@ -7,7 +7,7 @@ import GlobalState from '../../../pages/Hooks/GlobalState/index'
 const DefaultLayout = ({ children }) => {
   return (
     <GlobalState>
-      <div className='main'>
+      <div className=' main'>
         <Header />
         <div className='container'>
           <Silebar />

@@ -18,6 +18,13 @@ const SideBar = () => {
             <li><Link to="/useglobalstate">Global State with Context + useReducer </Link></li>
           </ul>
       </div>
+      <div>
+        <h3>List Redux Toolkit</h3>
+        <ul>
+          <li><Link to="/counter">Counter</Link></li>
+          <li><Link to="/posts">Posts</Link></li>
+        </ul>
+      </div>
     </div>
   )
 }

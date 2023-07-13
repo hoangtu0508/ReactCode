@@ -23,6 +23,7 @@ const SideBar = () => {
         <ul>
           <li><Link to="/counter">Counter</Link></li>
           <li><Link to="/posts">Posts</Link></li>
+          <li><Link to="/postsapp">PostsApp</Link></li>
         </ul>
       </div>
     </div>

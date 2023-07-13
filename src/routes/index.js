@@ -12,6 +12,7 @@ import GlobalState from "../pages/Hooks/GlobalState";
 
 import Counter from "../pages/redux/features/couter/Counter"
 import Posts from "../pages/redux/index"
+import PostsApp from "../pages/redux/features/post/PostsApp"
 const publicRoutes = [
     {path: '/', component: Home, layout : null},
     {path: '/hooks', component: Hooks},
@@ -27,6 +28,7 @@ const publicRoutes = [
 
     {path: '/counter', component: Counter},
     {path: '/posts', component: Posts},
+    {path: '/postsapp', component: PostsApp},
 
 ]
 

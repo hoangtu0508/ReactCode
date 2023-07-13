@@ -47,7 +47,7 @@ export const addNewPost = createAsyncThunk('posts/addNewPost', async (initialPos
     return response.data
 })
 
-const postsSlice = createSlice({
+const postsAppSlice = createSlice({
     name: 'posts',
     initialState,
     reducers: {
@@ -142,4 +142,4 @@ export const { postAdded,reactionAdded } = postsSlice.actions
 export const selectAllPosts = (state) => state.posts.posts;
 export const getPostsStatus = (state) => state.posts.status;
 export const getPostsError = (state) => state.posts.error;
-export default postsSlice.reducer 
+export default postsAppSlice.reducer 

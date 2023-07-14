@@ -5,7 +5,7 @@ const index = () => {
   return (
     <div>
       <div><AddPostForm/></div>
-      <div><PostsList/></div>
+      <div><PostsList /></div>
     </div>
   )
 }

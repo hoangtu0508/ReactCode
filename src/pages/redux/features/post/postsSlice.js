@@ -1,39 +1,12 @@
 import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
-import {sub} from 'date-fns'
+import { sub } from 'date-fns';
 import axios from "axios";
 
-const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts'
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const initialState = {
-    posts: [
-        { 
-            id: 1, 
-            title: 'Learning redux toolkit', 
-            content: "I've .....",
-            date: sub(new Date(), {minutes: 10}).toISOString(), 
-            reactions: {
-                thumbsUp: 0,
-                wow: 0,
-                heart: 0,
-                rocket: 0,
-                coffee: 0
-            }
-        },
-        { 
-            id: 2, 
-            title: 'Learning redux toolkit2', 
-            content: "I've .....2",
-            date: sub(new Date(), {minutes: 5}).toISOString(), 
-            reactions: {
-                thumbsUp: 0,
-                wow: 0,
-                heart: 0,
-                rocket: 0,
-                coffee: 0
-            }
-        }
-    ],
-    status: 'idle',
+    posts: [],
+    status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
     error: null
 }
 
@@ -138,8 +111,10 @@ const postsSlice = createSlice({
     }
 })
 
-export const { postAdded,reactionAdded } = postsSlice.actions
 export const selectAllPosts = (state) => state.posts.posts;
 export const getPostsStatus = (state) => state.posts.status;
 export const getPostsError = (state) => state.posts.error;
-export default postsSlice.reducer 
+
+export const { postAdded, reactionAdded } = postsSlice.actions
+
+export default postsSlice.reducer
